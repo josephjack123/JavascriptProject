@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<script>
+
+
+  // An object for a student
+
+let student = {
+  name: "Jack",        
+  age: 25,            
+  level: "Level 300",     
+  courses: ["Math302", "Stat302", "Cs302"] 
+};
+
+console.log("Student Name: " + student.name);
+console.log("Subjects: " + student.subjects);
+
+// An object for a product in a shop
+
+let product = {
+  name: "School Bag",
+  price: 50,      
+  stock: 10,      
+  category: "Bags"
+};
+
+// Function to reduce stock when someone buys
+
+function buyProduct() {
+  if (product.stock > 0) {
+    product.stock = product.stock - 1;  
+    console.log("You bought a " + product.name);
+    console.log("Stock left: " + product.stock);
+  } else {
+    console.log("Sorry, out of stock!");
+  }
+}
+
+// Try buying two times
+buyProduct();
+buyProduct();
+
+
+// Array (list) of cars
+let cars = [
+  { brand: "Toyota", model: "Corolla", year: 2020, available: true },
+  { brand: "Honda", model: "Civic", year: 2019, available: true },
+  { brand: "Hondas", model: "Accord", year: 2021, available: true }
+];
+
+// Function to rent a car (make available = false)
+function rentCar(index) {
+  if (cars[index].available === true) {
+    cars[index].available = false;
+    console.log("You rented: " + cars[index].brand + " " + cars[index].model);
+  } else {
+    console.log("Sorry, this car is already rented.");
+  }
+}
+
+// Rent the first car (Toyota)
+rentCar(0);
+
+// Check the car list
+console.log(cars);
+
+
+</script>
+
+</body>
+</html>
